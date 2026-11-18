@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heroImage?: string;
+  coverImage?: string;
+  pubDate?: Date;
+}
+
+const { title, description, heroImage, coverImage, pubDate } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} image={coverImage || heroImage}>
+  {coverImage && (
+    <img class="page-cover" src={coverImage} alt={title} />
+  )}
+  <header class="page-header">
+    <div class="page-icon">🌎</div>
+    <h1 class="page-title">{title}</h1>
+    {description && <p class="page-description">{description}</p>}
+    {pubDate && (
+      <p class="post-meta">
+        发布于 {pubDate.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}
+      </p>
+    )}
+  </header>
+  <article class="page-body">
+    <slot />
+  </article>
+</BaseLayout>

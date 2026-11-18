@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="全部文章 - 留学认证通">
+  <header class="page-header" style="margin-top: 2rem;">
+    <h1 class="page-title">全部文章</h1>
+    <p class="page-description">留学自救、学历认证与实操攻略</p>
+  </header>
+
+  <main class="page-body">
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li>
+          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          <p class="post-meta">
+            {post.data.pubDate.toLocaleDateString('zh-CN')}
+            {post.data.description && ` · ${post.data.description}`}
+          </p>
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>

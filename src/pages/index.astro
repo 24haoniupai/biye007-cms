@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="留学认证通 - 北美英澳留学无法毕业学历认证与学历提升一站式解决方案">
+  <img class="page-cover" src="/assets/cover-home.jpg" alt="留学认证通 - 北美及英澳学历认证与留学疑难解困服务封面" />
+  
+  <header class="page-header">
+    <div class="page-icon">🌎</div>
+    <h1 class="page-title">留学认证通 — 北美及英澳学历认证与留学疑难解困</h1>
+  </header>
+
+  <main class="page-body">
+    <div class="contact-box">
+      <h2>微信：caoffer</h2>
+      <p><strong>Email Us：hot0001@yeah.net</strong>（备用联系方式）</p>
+    </div>
+
+    <figure>
+      <img src="/assets/hero-bg.png" alt="本科留学没能毕业怎么办 - 真实案例、解决方法、学历认证与学历提升服务" style="width: 100%; border-radius: 8px;" />
+    </figure>
+
+    <figure>
+      <img src="/assets/service-1.jpg" alt="GRE考试无忧与College升本科、本科未能毕业升研究生学历提升解决方案" style="width: 100%; border-radius: 8px;" />
+    </figure>
+
+    <figure>
+      <img src="/assets/service-2.jpg" alt="因未能正常毕业或学历丢失导致无法认证公证的学历认证解决方案" style="width: 100%; border-radius: 8px;" />
+    </figure>
+
+    <figure>
+      <img src="/assets/service-3.jpg" alt="服务介绍" style="width: 100%; border-radius: 8px;" />
+    </figure>
+
+    <h2>留学自救与学历认证指南（真实案例与实操攻略）</h2>
+    
+    <ul class="post-list">
+      {posts.map((post) => (
+        <li>
+          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          {post.data.description && (
+            <p class="post-meta">{post.data.description}</p>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <figure>
+      <img src="/assets/contact-qr.jpg" alt="金题榜名留学认证通官方微信二维码 caoffer" style="width: 100%; max-width: 400px; margin: 2rem auto; border-radius: 8px;" />
+    </figure>
+  </main>
+</BaseLayout>
