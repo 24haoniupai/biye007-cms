@@ -15,6 +15,7 @@ public_folder: /assets
 
 locale: zh_Hans
 
+
 collections:
   - name: posts
     label: 文章
@@ -25,13 +26,35 @@ collections:
     extension: md
     format: frontmatter
     fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "描述 / 摘要", name: "description", widget: "string", required: false }
-      - { label: "发布日期", name: "pubDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "封面图", name: "coverImage", widget: "image", required: false }
-      - { label: "横幅图", name: "heroImage", widget: "image", required: false }
+      - { label: "文章标题", name: "title", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", required: false }
+      - { label: "文章摘要", name: "description", widget: "text", required: false }
+
+      - label: "文章分类"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "美国大学", value: "美国大学" }
+          - { label: "学业问题", value: "学业问题" }
+          - { label: "申诉与解决方案", value: "申诉与解决方案" }
+          - { label: "留学资讯", value: "留学资讯" }
+          - { label: "学历与认证", value: "学历与认证" }
+
       - { label: "标签", name: "tags", widget: "list", required: false }
+      - { label: "发布日期", name: "pubDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "更新日期", name: "updatedDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, required: false }
+
+      - { label: "封面图", name: "coverImage", widget: "image", required: false }
+      - { label: "封面图片说明（Alt）", name: "coverImageAlt", widget: "string", required: false }
+      - { label: "横幅图", name: "heroImage", widget: "image", required: false }
+
+      - { label: "SEO标题", name: "seoTitle", widget: "string", required: false }
+      - { label: "SEO描述", name: "seoDescription", widget: "text", required: false }
+
+      - { label: "作者", name: "author", widget: "string", default: "biye007" }
+      - { label: "首页置顶", name: "featured", widget: "boolean", default: false }
       - { label: "草稿", name: "draft", widget: "boolean", default: true }
+
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: pages

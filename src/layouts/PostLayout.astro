@@ -1,18 +1,36 @@
+
 ---
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
   description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
   heroImage?: string;
   coverImage?: string;
   pubDate?: Date;
 }
 
-const { title, description, heroImage, coverImage, pubDate } = Astro.props;
+const {
+  title,
+  description,
+  seoTitle,
+  seoDescription,
+  heroImage,
+  coverImage,
+  pubDate
+} = Astro.props;
+
+const pageTitle = seoTitle || title;
+const pageDescription = seoDescription || description;
 ---
 
-<BaseLayout title={title} description={description} image={coverImage || heroImage}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={coverImage || heroImage}
+>
   {coverImage && (
     <img class="page-cover" src={coverImage} alt={title} />
   )}
@@ -30,3 +48,4 @@ const { title, description, heroImage, coverImage, pubDate } = Astro.props;
     <slot />
   </article>
 </BaseLayout>
+
