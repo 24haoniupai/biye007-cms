@@ -9,7 +9,10 @@ interface Props {
   seoDescription?: string;
   heroImage?: string;
   coverImage?: string;
+  coverImageAlt?: string;
   pubDate?: Date;
+  updatedDate?: Date;
+  author?: string;
 }
 
 const {
@@ -19,20 +22,50 @@ const {
   seoDescription,
   heroImage,
   coverImage,
-  pubDate
+  coverImageAlt,
+  pubDate,
+  updatedDate,
+  author = 'biye007'
 } = Astro.props;
 
 const pageTitle = seoTitle || title;
 const pageDescription = seoDescription || description;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(coverImage || heroImage || '/assets/cover-home.jpg', Astro.site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: pageTitle,
+  description: pageDescription,
+  image: imageURL.href,
+  url: canonicalURL.href,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalURL.href
+  },
+ author: {
+  '@type': 'Organization',
+  name: author,
+  url: 'https://www.biye007.abrdns.com/'
+},
+  publisher: {
+    '@type': 'Organization',
+    name: '毕业不愁'
+  },
+  ...(pubDate && { datePublished: pubDate.toISOString() }),
+  ...(updatedDate && { dateModified: updatedDate.toISOString() })
+};
 ---
 
 <BaseLayout
   title={pageTitle}
   description={pageDescription}
   image={coverImage || heroImage}
+  schema={schema}
 >
   {coverImage && (
-    <img class="page-cover" src={coverImage} alt={title} />
+    <img class="page-cover" src={coverImage} alt={coverImageAlt || title} />
   )}
   <header class="page-header">
     <div class="page-icon">🌎</div>
