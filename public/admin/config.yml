@@ -2,8 +2,10 @@ backend:
   name: github
   repo: 24haoniupai/biye007-cms
   branch: main
-  base_url: https://www.biye007.abrdns.com  # 你的域名，用于 OAuth 回调
+  base_url: https://biye007-cms.hot0001.workers.dev
   auth_endpoint: /api/auth
+
+publish_mode: editorial_workflow
 
 # 本地开发时可用测试后端（不需要 GitHub）
 # local_backend: true
@@ -29,7 +31,7 @@ collections:
       - { label: "封面图", name: "coverImage", widget: "image", required: false }
       - { label: "横幅图", name: "heroImage", widget: "image", required: false }
       - { label: "标签", name: "tags", widget: "list", required: false }
-      - { label: "草稿", name: "draft", widget: "boolean", default: false }
+      - { label: "草稿", name: "draft", widget: "boolean", default: true }
       - { label: "正文", name: "body", widget: "markdown" }
 
   - name: pages

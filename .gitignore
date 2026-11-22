@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # Decap local
 # local_backend 产生的临时文件
+
+# Cloudflare Wrangler
+.wrangler/

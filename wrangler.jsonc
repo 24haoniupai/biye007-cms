@@ -1,0 +1,15 @@
+
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "biye007-cms",
+  "main": "./worker.js",
+  "compatibility_date": "2026-11-22",
+  "vars": {
+    "GITHUB_CLIENT_ID": "Ov23liztzS1ksIwzy0TE"
+  },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  }
+}
