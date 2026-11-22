@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: 你的GitHub用户名/biye007-cms
+  repo: 24haoniupai/biye007-cms
   branch: main
   base_url: https://www.biye007.abrdns.com  # 你的域名，用于 OAuth 回调
   auth_endpoint: /api/auth
