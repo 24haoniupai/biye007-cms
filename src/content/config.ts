@@ -33,5 +33,21 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
-
+// 首页等独立页面
+const pages = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    pageTitle: z.string().optional(),
+    wechat: z.string().optional(),
+    email: z.string().optional(),
+    coverImage: z.string().optional(),
+    heroImage: z.string().optional(),
+    serviceImage1: z.string().optional(),
+    serviceImage2: z.string().optional(),
+    serviceImage3: z.string().optional(),
+    sectionHeading: z.string().optional(),
+    qrImage: z.string().optional(),
+  }),
+});
+export const collections = { posts, pages };

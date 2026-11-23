@@ -57,12 +57,24 @@ collections:
 
       - { label: "正文", name: "body", widget: "markdown" }
 
+
   - name: pages
     label: 页面
     files:
       - name: home
-        label: 首页说明
+        label: 首页设置
         file: src/content/pages/home.md
         fields:
-          - { label: "标题", name: "title", widget: "string" }
-          - { label: "正文", name: "body", widget: "markdown" }
+          - { label: "SEO标题", name: "title", widget: "string" }
+          - { label: "首页主标题", name: "pageTitle", widget: "string" }
+          - { label: "微信号", name: "wechat", widget: "string" }
+          - { label: "联系邮箱", name: "email", widget: "string" }
+          - { label: "顶部封面图", name: "coverImage", widget: "image", required: false }
+          - { label: "主介绍图片", name: "heroImage", widget: "image", required: false }
+          - { label: "服务图片一", name: "serviceImage1", widget: "image", required: false }
+          - { label: "服务图片二", name: "serviceImage2", widget: "image", required: false }
+          - { label: "服务图片三", name: "serviceImage3", widget: "image", required: false }
+          - { label: "文章列表标题", name: "sectionHeading", widget: "string" }
+          - { label: "微信二维码", name: "qrImage", widget: "image", required: false }
+          - { label: "首页补充介绍", name: "body", widget: "markdown", required: false }
+
