@@ -1,14 +1,27 @@
 ---
-title: "我是如何从北美留学无法毕业的困境走出来的？北美本科肄业与海外学历认证经验分享"
-description: "中留服认证 / 教留服认证 / 留信认证 / 学历认证经验与真实故事"
+title: 我是如何从北美留学无法毕业的困境走出来的？北美本科肄业与海外学历认证经验分享
+slug: north-america-undergraduate-dropout-credential-experience
+description: 中留服认证 / 教留服认证 / 留信认证 / 学历认证经验与真实故事
+category: 学历与认证
+tags:
+  - 肄业
+  - 学历认证
+  - 中留服
+  - 留信认证
+  - 真实故事
 pubDate: 2026-11-18
-coverImage: "/assets/cover-nancy-story.jpg"
-heroImage: "/assets/nancy-story-banner.jpg"
-tags: ["肄业", "学历认证", "中留服", "留信认证", "真实故事"]
-draft: false
+coverImage: /assets/cover-nancy-story.jpg
+coverImageAlt: 北美本科无法毕业？肄业与中留服学历认证真实经验分享封面图
+heroImage: /assets/nancy-story-banner.jpg
+seoTitle: 我是如何从北美本科无法毕业走出来的？肄业与中留服学历认证真实经验
+seoDescription: 北美本科读不下去、无法毕业怎么办？本文真实分享从肄业困境中走出来的完整经历，涵盖中留服认证、留信认证、学历提升与后续出路规划，给同样困境的留学生一份参考与鼓励。
+author: https://www.biye007.abrdns.com/
+featured: false
+draft: true
 ---
-
 大家好，我是Nancy，一个在北美读本科的留学生。今天我想和大家分享一下我是如何从北美本科无法毕业的困境中走出来的，希望能给那些和我有过相同经历的同学们一些帮助和鼓励。
+
+![](https://biye007-cms.hot0001.workers.dev/assets/cover-nancy-story.jpg)
 
 ## 初到北美的憧憬
 
@@ -40,18 +53,18 @@ draft: false
 
 ## 相关方向参考
 
-- 加拿大大学无法毕业
-- 美国大学GPA太低被退学或挂科补救方案
-- 本科肄业与 Academic Probation 申诉指导
-- 学历提升规划
-- 中留服认证（教留服认证）、留信认证、海牙认证与海外学历学位认证材料梳理
-- 回国求职落户咨询
+* 加拿大大学无法毕业
+* 美国大学GPA太低被退学或挂科补救方案
+* 本科肄业与 Academic Probation 申诉指导
+* 学历提升规划
+* 中留服认证（教留服认证）、留信认证、海牙认证与海外学历学位认证材料梳理
+* 回国求职落户咨询
 
 ## 联系方式
 
 详情沟通欢迎联系：
 
-- **Telegram**：Kaowang007（备用）
-- **Email**：hot0001@yeah.net
+* **Telegram**：Kaowang007（备用）
+* **Email**：hot0001@yeah.net
 
 希望我的经历能给你一点力量。
