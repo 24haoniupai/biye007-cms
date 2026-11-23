@@ -9,19 +9,19 @@ tags:
   - 中留服
   - 留信认证
   - 真实故事
-pubDate: 2026-11-18
+pubDate: 2026-11-23
 coverImage: /assets/cover-nancy-story.jpg
 coverImageAlt: 北美本科无法毕业？肄业与中留服学历认证真实经验分享封面图
 heroImage: /assets/nancy-story-banner.jpg
 seoTitle: 我是如何从北美本科无法毕业走出来的？肄业与中留服学历认证真实经验
 seoDescription: 北美本科读不下去、无法毕业怎么办？本文真实分享从肄业困境中走出来的完整经历，涵盖中留服认证、留信认证、学历提升与后续出路规划，给同样困境的留学生一份参考与鼓励。
 author: https://www.biye007.abrdns.com/
-featured: true
+featured: false
 draft: true
 ---
 大家好，我是Nancy，一个在北美读本科的留学生。今天我想和大家分享一下我是如何从北美本科无法毕业的困境中走出来的，希望能给那些和我有过相同经历的同学们一些帮助和鼓励。
 
-![北美本科肄业与海外学历认证经验分享](https://biye007-cms.hot0001.workers.dev/assets/cover-nancy-story.jpg "北美留学无法毕业真实案例：本科肄业 + 中留服认证经验总结")
+![北美本科肄业与海外学历认证经验分享](/assets/cover-nancy-story.jpg "北美留学无法毕业真实案例：本科肄业 + 中留服认证经验总结")
 
 ## 初到北美的憧憬
 
