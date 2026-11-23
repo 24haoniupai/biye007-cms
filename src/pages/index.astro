@@ -10,82 +10,130 @@ if (!home) {
 }
 
 const { Content } = await render(home);
+const data = home.data;
 
 const posts = (await getCollection('posts', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// 图片显示顺序
+const imageMap = {
+  cover: {
+    image: data.coverImage,
+    alt: data.coverImageAlt || '留学认证通 - 北美及英澳学历认证与学历提升服务封面',
+    show: data.showCoverImage,
+    className: 'page-cover',
+  },
+  hero: {
+    image: data.heroImage,
+    alt: data.heroImageAlt || '本科留学未能毕业解决方案与学历认证服务介绍',
+    show: data.showHeroImage,
+  },
+  service1: {
+    image: data.serviceImage1,
+    alt: data.serviceImage1Alt || 'GRE考试与学历提升解决方案',
+    show: data.showServiceImage1,
+  },
+  service2: {
+    image: data.serviceImage2,
+    alt: data.serviceImage2Alt || '学历认证与学历提升解决方案',
+    show: data.showServiceImage2,
+  },
+  service3: {
+    image: data.serviceImage3,
+    alt: data.serviceImage3Alt || '留学认证通服务介绍',
+    show: data.showServiceImage3,
+  },
+  qr: {
+    image: data.qrImage,
+    alt: data.qrImageAlt || data.qrImageDescription || '金题榜留学认证通官方微信二维码 caoffer',
+    show: data.showQrImage,
+  },
+};
+
+const imageOrders = {
+  'cover-hero-service1-service2-service3-qr': [
+    'cover', 'hero', 'service1', 'service2', 'service3', 'qr',
+  ],
+  'cover-service1-hero-service2-service3-qr': [
+    'cover', 'service1', 'hero', 'service2', 'service3', 'qr',
+  ],
+  'cover-hero-service3-service2-service1-qr': [
+    'cover', 'hero', 'service3', 'service2', 'service1', 'qr',
+  ],
+};
+
+const selectedOrder =
+  imageOrders[data.imageOrder] ||
+  imageOrders['cover-hero-service1-service2-service3-qr'];
+
+const orderedImages = selectedOrder
+  .map((key) => ({ key, ...imageMap[key] }))
+  .filter((item) => item.show && item.image);
 ---
 
-<BaseLayout title={home.data.title}>
-  <img
-    class="page-cover"
-    src={home.data.coverImage}
-    alt="留学认证通 - 北美及英澳学历认证与学历提升服务封面"
-  />
+<BaseLayout title={data.title}>
+  {data.showCoverImage && data.coverImage && (
+    <img
+      class="page-cover"
+      src={data.coverImage}
+      alt={data.coverImageAlt || '留学认证通 - 北美及英澳学历认证与学历提升服务封面'}
+    />
+  )}
 
   <header class="page-header">
     <div class="page-icon">🌎</div>
-    <h1 class="page-title">{home.data.pageTitle}</h1>
+    <h1 class="page-title">{data.pageTitle}</h1>
   </header>
 
   <main class="page-body">
-    <div class="contact-box">
-      <h2>微信：{home.data.wechat}</h2>
-      <p><strong>Email Us：{home.data.email}</strong>（备用联系方式）</p>
-    </div>
+    {data.showContact && (
+      <div class="contact-box">
+        {data.wechat && <h2>微信：{data.wechat}</h2>}
+        {data.email && (
+          <p><strong>Email Us：{data.email}</strong>（备用联系方式）</p>
+        )}
+      </div>
+    )}
 
-    <figure>
-      <img
-        src={home.data.heroImage}
-        alt="本科留学没能毕业怎么办 - 真实案例、解决方法、学历认证与学历提升服务"
-        style="width: 100%; border-radius: 8px;"
-      />
-    </figure>
-
-    <figure>
-      <img
-        src={home.data.serviceImage1}
-        alt="GRE考试无忧与College升本科、本科未能毕业升研究生学历提升解决方案"
-        style="width: 100%; border-radius: 8px;"
-      />
-    </figure>
-
-    <figure>
-      <img
-        src={home.data.serviceImage2}
-        alt="因未能正常毕业或学历丢失导致无法认证公证的学历认证解决方案"
-        style="width: 100%; border-radius: 8px;"
-      />
-    </figure>
-
-    <figure>
-      <img
-        src={home.data.serviceImage3}
-        alt="服务介绍"
-        style="width: 100%; border-radius: 8px;"
-      />
-    </figure>
-
-    <h2>{home.data.sectionHeading}</h2>
-
-    <ul class="post-list">
-      {posts.map((post) => (
-        <li>
-          <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-          {post.data.description && (
-            <p class="post-meta">{post.data.description}</p>
-          )}
-        </li>
+    {orderedImages
+      .filter((item) => item.key !== 'cover' && item.key !== 'qr')
+      .map((item) => (
+        <figure>
+          <img
+            src={item.image}
+            alt={item.alt}
+            style="width: 100%; border-radius: 8px;"
+          />
+        </figure>
       ))}
-    </ul>
 
-    <figure>
-      <img
-        src={home.data.qrImage}
-        alt="金题榜名留学认证通官方微信二维码 caoffer"
-        style="width: 100%; max-width: 400px; margin: 2rem auto; border-radius: 8px;"
-      />
-    </figure>
+    {data.showPostList && (
+      <>
+        <h2>{data.sectionHeading || '留学自救与学历认证指南'}</h2>
 
-    <Content />
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li>
+              <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+              {post.data.description && (
+                <p class="post-meta">{post.data.description}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    {data.showQrImage && data.qrImage && (
+      <figure>
+        <img
+          src={data.qrImage}
+          alt={data.qrImageAlt || data.qrImageDescription || '金题榜名留学认证通官方微信二维码 caoffer'}
+          style="width: 100%; max-width: 400px; margin: 2rem auto; border-radius: 8px;"
+        />
+      </figure>
+    )}
+
+    {data.showBody && <Content />}
   </main>
 </BaseLayout>

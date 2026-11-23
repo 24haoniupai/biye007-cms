@@ -1,3 +1,4 @@
+
 backend:
   name: github
   repo: 24haoniupai/biye007-cms
@@ -14,7 +15,6 @@ media_folder: public/assets
 public_folder: /assets
 
 locale: zh_Hans
-
 
 collections:
   - name: posts
@@ -57,7 +57,6 @@ collections:
 
       - { label: "正文", name: "body", widget: "markdown" }
 
-
   - name: pages
     label: 页面
     files:
@@ -65,16 +64,59 @@ collections:
         label: 首页设置
         file: src/content/pages/home.md
         fields:
+          # 基础信息
           - { label: "SEO标题", name: "title", widget: "string" }
           - { label: "首页主标题", name: "pageTitle", widget: "string" }
           - { label: "微信号", name: "wechat", widget: "string" }
           - { label: "联系邮箱", name: "email", widget: "string" }
+
+          # 首页图片
           - { label: "顶部封面图", name: "coverImage", widget: "image", required: false }
+          - { label: "顶部封面图 Alt 描述", name: "coverImageAlt", widget: "string", required: false }
+
           - { label: "主介绍图片", name: "heroImage", widget: "image", required: false }
+          - { label: "主介绍图片 Alt 描述", name: "heroImageAlt", widget: "string", required: false }
+
           - { label: "服务图片一", name: "serviceImage1", widget: "image", required: false }
+          - { label: "服务图片一 Alt 描述", name: "serviceImage1Alt", widget: "string", required: false }
+
           - { label: "服务图片二", name: "serviceImage2", widget: "image", required: false }
+          - { label: "服务图片二 Alt 描述", name: "serviceImage2Alt", widget: "string", required: false }
+
           - { label: "服务图片三", name: "serviceImage3", widget: "image", required: false }
-          - { label: "文章列表标题", name: "sectionHeading", widget: "string" }
+          - { label: "服务图片三 Alt 描述", name: "serviceImage3Alt", widget: "string", required: false }
+
           - { label: "微信二维码", name: "qrImage", widget: "image", required: false }
+          - { label: "微信二维码 Alt 描述", name: "qrImageAlt", widget: "string", required: false }
+
+          # 首页图片显示顺序（下一步接入网站）
+          - label: "首页图片显示顺序"
+            name: "imageOrder"
+            widget: "select"
+            default: "cover-hero-service1-service2-service3-qr"
+            options:
+              - { label: "封面→主介绍→服务一→服务二→服务三→二维码", value: "cover-hero-service1-service2-service3-qr" }
+              - { label: "封面→服务一→主介绍→服务二→服务三→二维码", value: "cover-service1-hero-service2-service3-qr" }
+              - { label: "封面→主介绍→服务三→服务二→服务一→二维码", value: "cover-hero-service3-service2-service1-qr" }
+
+          # 首页模块显示开关（下一步接入网站）
+          - label: "首页模块显示设置"
+            name: "showContact"
+            widget: "boolean"
+            default: true
+
+          - { label: "显示顶部封面图", name: "showCoverImage", widget: "boolean", default: true }
+          - { label: "显示主介绍图片", name: "showHeroImage", widget: "boolean", default: true }
+          - { label: "显示服务图片一", name: "showServiceImage1", widget: "boolean", default: true }
+          - { label: "显示服务图片二", name: "showServiceImage2", widget: "boolean", default: true }
+          - { label: "显示服务图片三", name: "showServiceImage3", widget: "boolean", default: true }
+          - { label: "显示文章列表", name: "showPostList", widget: "boolean", default: true }
+          - { label: "显示微信二维码", name: "showQrImage", widget: "boolean", default: true }
+          - { label: "显示首页补充介绍", name: "showBody", widget: "boolean", default: true }
+
+          # 文章列表和补充内容
+          - { label: "文章列表标题", name: "sectionHeading", widget: "string" }
+          - { label: "微信二维码图片说明", name: "qrImageDescription", widget: "string", required: false }
           - { label: "首页补充介绍", name: "body", widget: "markdown", required: false }
+
 
