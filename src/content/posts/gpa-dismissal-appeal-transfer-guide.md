@@ -19,7 +19,7 @@ author: www.biye007.abrdns.com
 featured: false
 draft: false
 ---
-![](https://biye007-cms.hot0001.workers.dev/assets/cover-gpa-dismissal.png)
+
 
 ### **GPA太低面临学术退学（Academic Dismissal）**是很多北美华裔留学生最焦虑的危机之一。尤其是持F-1签证的学生，一旦学校终止I-20并通知SEVIS，学生身份可能迅速失效，导致必须离境或面临复杂reinstatement申请。
 
