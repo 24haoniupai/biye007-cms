@@ -3,6 +3,7 @@ title: 留学认证通｜北美英国澳洲留学生毕业困难、学历认证�
 pageTitle: 留学认证通 — 北美及英澳学历认证与留学疑难解困
 wechat: caoffer
 email: hot0001@yeah.net
+coverImage: /assets/cover-home.jpg
 coverImageAlt: 留学认证通：北美、英国、澳大利亚留学学历认证与学历提升服务
 heroImageAlt: 美国本科留学生未能毕业的解决方案、学历提升与留学规划服务
 serviceImage1Alt: 美国留学生 GRE 考试辅导、College 转本科及学历提升方案
