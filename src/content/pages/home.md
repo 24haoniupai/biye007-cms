@@ -7,9 +7,13 @@ coverImage: /assets/cover-home.jpg
 coverImageAlt: 留学认证通：北美、英国、澳大利亚留学学历认证与学历提升服务
 heroImage: /assets/hero-bg.png
 heroImageAlt: 美国本科留学生未能毕业的解决方案、学历提升与留学规划服务
+serviceImage1: /assets/service-1.jpg
 serviceImage1Alt: 美国留学生 GRE 考试辅导、College 转本科及学历提升方案
+serviceImage2: /assets/service-2.jpg
 serviceImage2Alt: 留学生未能正常毕业、学历丢失及学历认证解决方案
+serviceImage3: /assets/service-3.jpg
 serviceImage3Alt: 留学认证通提供的学历认证、留学申诉与学历提升服务
+qrImage: /assets/contact-qr-1.jpg
 qrImageAlt: 留学认证通官方微信 caoffer 联系二维码
 imageOrder: cover-hero-service1-service2-service3-qr
 showContact: true
