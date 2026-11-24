@@ -10,7 +10,7 @@ serviceImage2Alt: 留学生未能正常毕业、学历丢失及学历认证解�
 serviceImage3Alt: 留学认证通提供的学历认证、留学申诉与学历提升服务
 qrImageAlt: 留学认证通官方微信 caoffer 联系二维码
 imageOrder: cover-hero-service1-service2-service3-qr
-showContact: false
+showContact: true
 showCoverImage: true
 showHeroImage: true
 showServiceImage1: true
