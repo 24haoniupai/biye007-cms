@@ -5,6 +5,7 @@ wechat: caoffer
 email: hot0001@yeah.net
 coverImage: /assets/cover-home.jpg
 coverImageAlt: 留学认证通：北美、英国、澳大利亚留学学历认证与学历提升服务
+heroImage: /assets/hero-bg.png
 heroImageAlt: 美国本科留学生未能毕业的解决方案、学历提升与留学规划服务
 serviceImage1Alt: 美国留学生 GRE 考试辅导、College 转本科及学历提升方案
 serviceImage2Alt: 留学生未能正常毕业、学历丢失及学历认证解决方案
