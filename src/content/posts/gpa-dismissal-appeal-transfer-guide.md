@@ -1,7 +1,7 @@
 ---
 title: GPA太低被退学怎么办？2026北美华裔F-1留学生申诉+紧急转学完整自救指南
 slug: gpa-dismissal-appeal-transfer-guide
-description: 学术退学申诉流程、紧急转学路径、F-1身份维护与预防措施
+description: 北美大学GPA过低面临学术退学怎么办？本文介绍申诉流程、材料准备、紧急转学选择及F-1学生身份维护要点，帮助留学生梳理后续应对方案。
 category: 申诉与解决方案
 tags:
   - GPA
@@ -11,10 +11,10 @@ tags:
   - F-1
 pubDate: 2026-11-18
 coverImage: /assets/cover-gpa-dismissal.png
-coverImageAlt: GPA太低被退学怎么办？北美F-1留学生学术退学申诉与紧急转学自救指南封面图
+coverImageAlt: 北美F-1留学生GPA过低、学术退学申诉与紧急转学指南封面图
 heroImage: /assets/gpa-dismissal-banner.png
-seoTitle: GPA太低被退学怎么办？2026北美F-1留学生申诉+紧急转学完整指南
-seoDescription: GPA太低面临学术退学？本文详细拆解北美大学申诉流程、证据准备、紧急转学社区学院路径及F-1身份维护方法。2026最新政策，帮助华裔留学生快速止损、保住身份、重启学业。
+seoTitle: 北美本科留学生无法毕业后的学历认证与学历提升解决方案横幅图
+seoDescription: GPA太低面临北美大学学术退学？了解申诉流程、证据材料、紧急转学及社区学院选择，以及F-1学生身份维护要点，梳理留学生后续应对路径。
 author: www.biye007.abrdns.com
 featured: false
 draft: false
