@@ -16,7 +16,7 @@ serviceImage3Alt: 留学认证通提供的学历认证、留学申诉与学历�
 qrImage: /assets/contact-qr-1.jpg
 qrImageAlt: 留学认证通官方微信 caoffer 联系二维码
 imageOrder: cover-hero-service1-service2-service3-qr
-showContact: true
+showContact: false
 showCoverImage: true
 showHeroImage: true
 showServiceImage1: true
