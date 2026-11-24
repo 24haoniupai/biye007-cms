@@ -40,20 +40,20 @@ const imageURL = new URL(image, Astro.site);
       />
     )}
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8C%8E%3C%2Ftext%3E%3C%2Fsvg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%F0%9F%8C%8E%3C%2Ftext%3E%3C%2Fsvg%3E" />
     <slot name="head" />
   </head>
   <body>
     <nav class="site-nav">
       <a href="/">首页</a>
       <a href="/posts">全部文章</a>
-      <a href="/admin/" style="margin-left: auto; color: var(--color-primary);">管理后台</a>
     </nav>
+
     <slot />
+
     <footer class="site-footer">
       <p><strong>Created by 毕业不愁~留学疑难~终极解困©</strong></p>
       <p>微信：caoffer · Email：hot0001@yeah.net</p>
     </footer>
   </body>
 </html>
-
